@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+        <style>
+        	.del{
+        		text-decoration: line-through;
+        	}
+        	
+        </style>
+        <script src="js/vue.js"></script>
+	</head>
+	<body>
+		<div id="box">
+			<input type="checkbox" v-model="flag"/>
+			<p v-bind:style="{'text-decoration':flag?'line-through':'none'}">test 段落</p>
+			<p v-bind:class="{'del':flag}">test 段落</p>
+			<p v-bind:class="[flag?'del':'']">test 段落</p>
+		</div>
+        <script>
+        	new Vue({
+        		el:"#box",
+        		data:{
+        			flag:true
+        		}
+        	})
+        </script>
+	</body>
+</html>

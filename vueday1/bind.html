@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+		<div id="box">
+			<p v-bind:title="currentTime">test 段落</p>
+			<p :title="currentTimeStamp">test 段落</p> <!--可以省略v-bind-->
+		</div>
+		<script>
+			new Vue({
+				el:"#box",
+				data:{
+					currentTime:new Date().toLocaleString(),
+					currentTimeStamp:new Date().getTime()
+				}
+			})
+		</script>
+	</body>
+</html>

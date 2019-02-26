@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+<!--		<div id="box">
+			{{msg.charAt(0)}}
+		<p title="javascript">段落</p>
+		<p v-html="msg"></p>
+		<p v-bind:title="msg">段落</p>
+		<input type="text" v-bind:value="msg" />
+		<input type="text" v-model="msg" value="abcdef" />
+		<input type="checkbox" v-model="flag" /> 
+		</div>
+		<script>
+			var vm=new Vue({
+				el:"#box",
+				data:{
+					msg:"<h1>hello world</h1>",
+					flag:true
+				}
+				
+			})
+			console.log(vm);
+		</script>-->
+<!--        <div id="box">
+        	<p v-html="msg"></p>
+        	<p><textarea v-model="msg" maxlength="20"></textarea><span v-if="msg.length>0">还可以输入{{20-msg.length}}个字</span></p>
+        	<p><input type="text" v-model.number.lazy="a"></p>
+        	<p><input type="text" v-model.number.lazy="b">{{a+b}}</p>
+        	<p><input type="text" v-model="c"></p>
+        	<p><input type="text" v-model.trim="d">{{c+d}}</p>
+        </div>
+        <script>
+        	var vm=new Vue({
+        		el:"#box",
+        		data:{
+        			msg:"",
+        			a:1,
+        			b:1,
+        			c:"",
+        			d:""
+        		}
+        	})
+        </script>-->
+        <div id="box">
+        	<p v-html="msg"></p>
+        	<p v-bind:title="msg">我的段落</p>
+        	<input type="text" v-bind:value="msg" />
+        	<input type="text" v-model="msg" />
+        	<input type="checkbox" v-model="flag" />
+        	<input type="text" maxlength="20" v-model="msg" />
+        	<span v-if="msg.length>0">还可以输入{{20-msg.length}}个字</span>
+        </div>
+        <script>
+        	var vm=new Vue({
+        		el:"#box",
+        		data:{
+        			msg:"",
+        			flag:true
+        		}
+        	})
+        </script>
+	</body>
+</html>
